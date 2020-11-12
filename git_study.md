@@ -208,6 +208,45 @@ Git鼓励大量使用分支：
 
 创建+切换分支：`git checkout -b `或者`git switch -c `
 
-合并某分支到当前分支：`git merge `
+合并某分支到当前分支：`git merge `+分支名 
 
-删除分支：`git branch -d `
+删除分支：`git branch -d+分支名  `
+
+ `git log --graph`命令可以看到分支合并图 
+
+# 13 查看分支合并图
+
+```c
+$ git log --graph --pretty=oneline --abbrev-commit
+```
+
+# 14 普通模式合并分支
+
+```c
+$ git merge --no-ff -m "注释merge with no-ff" 分支名
+```
+
+# 15 存储工作区
+
+```c
+git stash
+```
+
+# 16 恢复工作现场
+
+```c
+git stash pop
+```
+
+# 17 查看存储内容
+
+```c
+git stash list
+```
+
+# 18 复制特定的分支
+
+```c
+git cherry-pick <commit>
+```
+
